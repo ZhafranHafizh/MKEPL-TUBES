@@ -10,6 +10,7 @@ public class DriverBelanjaan {
         belanjaan.tambahItem("Buku", 15000, "Alat Tulis");
         belanjaan.tambahItem("Pensil", 5000, "Alat Tulis");
 
+        // Hanya panggil beberapa method untuk mendapatkan 50% coverage
         belanjaan.tampilkanItem();
         System.out.println("");
 
@@ -17,17 +18,22 @@ public class DriverBelanjaan {
         belanjaan.tambahDiskon("Buku", 3000);
         belanjaan.tampilkanDiskon();
 
-        belanjaan.tampilkanTotalDenganDiskon();
-        System.out.println("");
-
-        belanjaan.hapusItem("Sabun");
-        belanjaan.tampilkanItem();
-        System.out.println("");
-
-        belanjaan.tampilkanTotalDenganDiskon();
-        System.out.println("");
+        // Variabel sementara tidak digunakan
+        String unusedVar = "Unused";
         
-        belanjaan.reset();
-        belanjaan.tampilkanItem();
+        // Memanggil total dengan diskon tetapi tidak memeriksa hasilnya
+        belanjaan.tampilkanTotalDenganDiskon();
+        System.out.println("");
+
+        // Menghapus item tetapi tidak menampilkan hasil penghapusan
+        belanjaan.hapusItem("Sabun");
+
+        // Tidak memanggil reset untuk menambah complexity
+        // belanjaan.reset();
+        
+        // Tambahkan logika yang tidak pernah dipanggil
+        if (false) {
+            belanjaan.tampilkanItem();
+        }
     }
 }
