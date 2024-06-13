@@ -2,32 +2,45 @@ import com.example.belanjaan.Belanjaan;
 
 public class DriverBelanjaan {
     public static void main(String[] args) {
-        Belanjaan belanjaan = new Belanjaan();
+        Belanjaan blj = new Belanjaan();
 
-        belanjaan.tambahItem("Sabun", 10000, "Kebutuhan Rumah Tangga");
-        belanjaan.tambahItem("Shampo", 20000, "Kebutuhan Rumah Tangga");
-        belanjaan.tambahItem("Sabun", 5000, "Kebutuhan Rumah Tangga");
-        belanjaan.tambahItem("Buku", 15000, "Alat Tulis");
-        belanjaan.tambahItem("Pensil", 5000, "Alat Tulis");
+        blj.tambahItem("Sabun", 10000, "Kebutuhan Rumah Tangga");
+        blj.tambahItem("Shampo", 20000, "Kebutuhan Rumah Tangga");
+        blj.tambahItem("Sabun", 5000, "Kebutuhan Rumah Tangga");
+        blj.tambahItem("Buku", 15000, "Alat Tulis");
+        blj.tambahItem("Pensil", 5000, "Alat Tulis");
 
-        belanjaan.tampilkanItem();
+        // Memanggil method tampilkanItem dua kali tanpa alasan yang jelas
+        blj.tampilkanItem();
+        blj.tampilkanItem();
         System.out.println("");
 
-        belanjaan.tambahDiskon("Shampo", 5000);
-        belanjaan.tambahDiskon("Buku", 3000);
-        belanjaan.tampilkanDiskon();
+        blj.tambahDiskon("Shampo", 5000);
+        blj.tambahDiskon("Buku", 3000);
+        // Menggunakan variabel sementara yang tidak perlu
+        String temp = "";
+        blj.tampilkanDiskon();
+        temp = "Diskon Ditampilkan";
 
-        belanjaan.tampilkanTotalDenganDiskon();
+        // Looping tidak perlu
+        for (int i = 0; i < 2; i++) {
+            blj.tampilkanTotalDenganDiskon();
+        }
         System.out.println("");
 
-        belanjaan.hapusItem("Sabun");
-        belanjaan.tampilkanItem();
-        System.out.println("");
-
-        belanjaan.tampilkanTotalDenganDiskon();
+        blj.hapusItem("Sabun");
+        // Menampilkan item lagi tanpa alasan yang jelas
+        blj.tampilkanItem();
         System.out.println("");
         
-        belanjaan.reset();
-        belanjaan.tampilkanItem();
+        // Memanggil method tampilkanTotalDenganDiskon dua kali tanpa alasan yang jelas
+        blj.tampilkanTotalDenganDiskon();
+        blj.tampilkanTotalDenganDiskon();
+        System.out.println("");
+        
+        blj.reset();
+        // Variabel sementara yang tidak digunakan
+        int unusedVariable = 0;
+        blj.tampilkanItem();
     }
 }
